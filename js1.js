@@ -1,108 +1,168 @@
-// ФУНКЦИИ
+// // ФУНКЦИИ
 
-console.log(window)
-console.log(window.innerHeight)
-console.log(window.innerWidth)
-console.log(screen.height)
-console.log(screen.width)
+'use strict'
 
-// простая функция
+// console.log(window)
+// console.log(window.innerHeight)
+// console.log(window.innerWidth)
+// console.log(screen.height)
+// console.log(screen.width)
 
-let a = 5,
-  b = 6
+// // простая функция
 
-function sum(d, e) {
-  const c = d + e
-  console.log(c)
+// let a = 5,
+//   b = 6
+
+// function sum(d, e) {
+//   const c = d + e
+//   console.log(c)
+// }
+
+// sum(a, b)
+
+// // функция- это объект, который имеет свои свойства
+
+// function great(a, b, c, d) {
+//   const f = a + b + c + d
+// }
+
+// great()
+
+// console.dir(great)
+// console.log(great)
+
+// function dpr() {
+//   return window.devicePixelRatio
+// }
+// console.log(dpr())
+
+// nord(3, 5);
+
+// function nord(aa = 7, bb = 8, cc = 9) {
+//   console.log(aa, bb, cc)
+// }
+
+// // не рекомендуется мутировать объекты внутри функции, аргумент объект передает ссылку в качестве параметра
+
+// const green = {
+//   abc: 100
+// }
+
+// function def(red) {
+//   red.abc += 5
+// }
+
+// def(green)
+
+// console.log(green.abc)
+
+// // лучше использовать копирование объекта
+
+// const ch = {
+//   ab: 1999
+// }
+
+// function cd(pr) {
+//   const fff = Object.assign({}, pr)
+//   fff.ab += 1
+//   return fff
+// }
+
+// // если нет команды return функция по умолчанию возвращает undefined
+
+// const dd = cd(ch)
+
+// console.log(ch.ab)
+// console.log(dd.ab)
+
+
+
+// // КОЛБЭК ФУНКЦИИ
+
+// // не работает хзчт
+// function ik() {
+//   const d = 10
+//   console.log(d)
+// }
+
+// function ww(tt) {
+//   function tt() {}
+// }
+
+// ww(ik)
+
+// // Пример колбэк функции
+
+// function wq() {
+//   console.log('Andrew')
+// }
+
+// console.log('start')
+
+// setTimeout(wq, 3000)
+
+// // ПРАВИЛА РАБОТЫ С ФУНКЦИЯМИ
+
+// // 1 Называть функцию глаголом, согласно выполняемых ею действий
+// // 2 Одна функция должна выполнять одно действие
+// // 3 Функция должна быть чистой, т.е. не изменять свойства внешних переменных, а работать только с внутренними
+
+// // ОБЛАСТЬ ВИДИМОСТИ (границы действия переменной)
+
+// //глобальную переменную sw можно вызвать и использовать из функции, переменную aq можно использовать только внутри функции т.к. она там объявлена, глобальная aq и локальная aq- разные переменные
+
+// // пример
+
+// let aq = 3,
+//   sw = 4
+
+// function cce() {
+//   let aq = 0
+//   sw = 8
+//   console.log(aq)
+// }
+// cce()
+// console.log(aq)
+// console.log(sw)
+
+// // пример 2
+
+// // функцию fe можно вызвать только внутри функции ie
+
+let r = 7
+let s
+
+function ie() {
+
+  let io = 5
+  // console.log(ks) т.е мы не можем обратиться к переменной ks т.к. она вложена на локальный уровень ниже и уничтожается как только функция fe была выполнена, переменной s было присвоено значение в локальной области и оно сохранилось в глобальной т.к. переменная не была объявлена в локальной. Также видимость сохраняется и в блоках ветвления и циклах и т.п., внутри фигурных скобок.
+
+  function fe() {
+
+    s = 5
+    let ks = 8
+
+    console.log(r)
+    console.log(io)
+  }
+  fe()
+}
+ie()
+console.log(s)
+
+// не рекомендуется присваивать в локальных областях автоматические глобольные переменные (без объявления они автоматически становятся глобальными):
+
+function fu (){
+  a = 5
 }
 
-sum(a, b)
+// fu() 
+console.log(a)
 
-// функция- это объект, который имеет свои свойства
+// правила работы с переменными
+// 1 все переменные объявлять перед их использованием
+// 2 использовать const везде где это возможно
+// 3 не изменять из локальных областей глобальных переменных
 
-function great(a, b, c, d) {
-  const f = a + b + c + d
-}
-
-great()
-
-console.dir(great)
-console.log(great)
-
-function dpr() {
-  return window.devicePixelRatio
-}
-console.log(dpr())
-
-nord(3, 5);
-
-function nord(aa = 7, bb = 8, cc = 9) {
-  console.log(aa, bb, cc)
-}
-
-// не рекомендуется мутировать объекты внутри функции, аргумент объект передает ссылку в качестве параметра
-
-const green = {
-  abc: 100
-}
-
-function def(red) {
-  red.abc += 5
-}
-
-def(green)
-
-console.log(green.abc)
-
-// лучше использовать копирование объекта
-
-const ch = {
-  ab: 1999
-}
-
-function cd(pr) {
-  const fff = Object.assign({}, pr)
-  fff.ab += 1
-  return fff
-}
-
-// если нет команды return функция по умолчанию возвращает undefined
-
-const dd = cd(ch)
-
-console.log(ch.ab)
-console.log(dd.ab)
-
-
-
-// КОЛБЭК ФУНКЦИИ
-
-// не работает хзчт
-function ik() {
-  const d = 10
-  console.log(d)
-}
-
-function ww(tt) {
-  function tt() {}
-}
-
-ww(ik)
-
-// Пример колбэк функции
-
-function wq() {
-  console.log('Andrew')
-}
-
-console.log('start')
-
-setTimeout(wq, 3000)
-
-// ПРАВИЛА РАБОТЫ С ФУНКЦИЯМИ
-
-// 1 Называть функцию глаголом, согласно выполняемых ею действий
-// 2 Одна функция должна выполнять одно действие
-// 3 Функция должна быть чистой, т.е. не изменять свойства внешних переменных, а работать только с внутренними
-
+// для запрещения использования необъявленных переменных и т.п. используется объявление строгого режима в самом начале программы: 'use strict', или если нужен строгий режим внутри локальной области то 'use strict' ставится сразу после открывающей фигурной скобки.
 
