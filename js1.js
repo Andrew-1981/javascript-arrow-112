@@ -212,3 +212,66 @@ let ce = 5, cd = 0, cs = 98, cl =3
 console.log(ce && cd && cs && cl)
 console.log(ce || cd || cs || cl)
 
+// оператор ...
+// при его использовании в копии можно независимо от оригинала изменять только основные свойства, вложенные будут изменяться вместе с оригиналом, также можно добавлять копии свойства, если эти свойства уже есть в оригинале то они будут перезаписаны, но если ...объект записать после добавленных свойств и они в нём уже будут то они перепишутся как в оригинале. С его помощью также можно объединять несколько объектов в одном, одинаковые свойства также будут перезаписываться в зависимости от порядка располождения
+
+const aws = {
+  color: 'red',
+  size: 35,
+  punkt: {
+    netto: 55,
+    brutto: 100
+  }
+}
+
+const aqs = {
+  ...aws,
+  speed: 44
+}
+
+aqs.punkt.brutto = 999
+aqs.color = 382
+
+console.log(aws)
+console.log(aqs)
+
+console.log(aws)
+console.log(aqs)
+
+console.table(aws)
+console.table(aqs)
+
+const aws1 = {
+  color: 'red',
+  size: 777777,
+  punkt: {
+    netto: 999999,
+    brutto: 100
+  }
+}
+
+const aws2 = {
+  color: 'red',
+  size: 35,
+  punkt: {
+    netto: 55,
+    brutto: 100
+  }
+}
+
+const aes = {
+  ...aws2,
+  ...aws1
+}
+
+console.table(aes)
+
+// интерполяция 
+
+function iu(){
+  return 'Andrew'
+}
+const co = 'My name '
+
+console.log(`${co}${iu()}`)
+
