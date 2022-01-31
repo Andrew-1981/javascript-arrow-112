@@ -95,3 +95,37 @@ console.log('start')
 
 setTimeout(wq, 3000)
 
+// стрелочная функция
+
+const jk = () => {console.log('стрелка')}
+
+setTimeout(jk, 3000)
+
+setTimeout(() => {console.log('стрелка ')}, 3000)
+
+console.log(Date())
+
+// СОЗДАНИЕ ОБЪЕКТА С ПОМОЩЬЮ СТРЕЛОЧНОЙ ФУНКЦИИ
+// круглые скобки без return возвращают значение, параметр функции ведет себя как переменная и мы добавляем свойство с помощью оператора запятая
+
+const ow = {
+  color: 'blue',
+  size: 67
+}
+
+const ou = (one, two = Date()) => ({
+  ...one,
+  two,
+})
+
+const qo = ou(ow)
+console.log(qo)
+
+let f = 9, i = 54, ce = 43
+const jwq = {
+  f,
+  i,
+  ce,
+}
+
+console.table(jwq)
