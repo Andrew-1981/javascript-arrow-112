@@ -129,3 +129,17 @@ const jwq = {
 }
 
 console.table(jwq)
+
+// ГЕНЕРАТОР ОШИБОК
+
+const owo = () => {
+  throw new Error('Some error')
+}
+
+try {
+  owo()
+} catch (error){
+  console.error(error)
+  console.log(error.massage)
+}
+console.log('contine ...')
