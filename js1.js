@@ -56,3 +56,24 @@ fjs = 3
 console.log(fjs)
 fjs = fi()
 console.log(fjs)
+
+// элемент unshift добавляет элемент в начало массива, остальные элементы сдвигаются вправо
+
+const oiu = [
+  1, 2, 3, 4, 5
+]
+console.log(oiu)
+console.log(oiu[0])
+
+oiu.unshift('fjjjk')
+console.log(oiu)
+
+// метод shift удаляет первый элемент и возвращает его значение
+
+const asw = oiu.shift()
+console.log(oiu)
+console.log(asw)
+
+// метод forEach не изменяет оригинал, перебирает все элементы массива и производит определенные действия над ними
+
+oiu.forEach(el => console.log(el * 10))
