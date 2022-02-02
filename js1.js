@@ -85,3 +85,26 @@ const zc = [1, 2, 3, 4, 5]
 const cx = zc.map(d => d * 5)
 console.log(zc)
 console.log(cx)
+
+// ДЕСТРУКТОРИЗАЦИЯ 
+// присвоение переменным свойств объекта
+
+const kn = {
+  f: 'fdf',
+  s: 343
+}
+const {f, s} = kn
+console.log(f, s)
+
+// присвоение переменным элементов массива
+
+const cdf = Array('dfds', 'flie', 'dfs', 'fkji', 'fsie')
+
+const [a, b, c, d, e] = cdf
+console.log(a, b, c, d, e)
+
+// присвоение параметрам функции свойств объекта
+
+const gf = ({f, s}) => console.log(f, s)
+gf(kn)
+
