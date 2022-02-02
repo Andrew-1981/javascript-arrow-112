@@ -95,3 +95,10 @@ console.log('start')
 
 setTimeout(wq, 3000)
 
+// свойство массива map
+
+const zc = [1, 2, 3, 4, 5]
+
+const cx = zc.map(d => d * 5)
+console.log(zc)
+console.log(cx)
