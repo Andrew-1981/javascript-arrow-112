@@ -1,99 +1,82 @@
-// // ФУНКЦИИ
+'use strict'
 
-// console.log(window)
-// console.log(window.innerHeight)
-// console.log(window.innerWidth)
-// console.log(screen.height)
-// console.log(screen.width)
+// МАССИВЫ
+// способы создания
 
-// // простая функция
+const oe = [1, 2, 3, 4, 5]
+console.log(oe)
 
-// let a = 5,
-//   b = 6
+const er = new Array(1, 2, 3, 4, 5)
+console.log(er)
 
-// function sum(d, e) {
-//   const c = d + e
-//   console.log(c)
-// }
+// размер массива можно измекнять, изменив его свойство length (не рекомендуется)
 
-// sum(a, b)
+er.length = 8
+console.log(er)
 
-// // функция- это объект, который имеет свои свойства
+// обращение к элементам
 
-// function great(a, b, c, d) {
-//   const f = a + b + c + d
-// }
+console.log(oe[2])
 
-// great()
+// изменение и добавление элементов
 
-// console.dir(great)
-// console.log(great)
+oe[2] = 'fjdkjd'
+oe[5] = 'ffffffffff'
+console.log(oe)
 
-// function dpr() {
-//   return window.devicePixelRatio
-// }
-// console.log(dpr())
+const sdf = {
+  dff: 'kjlj'
+} 
 
-// nord(3, 5);
+// некоторые методы массивов
 
-// function nord(aa = 7, bb = 8, cc = 9) {
-//   console.log(aa, bb, cc)
-// }
+// добавление крайнего элемента
 
-// // не рекомендуется мутировать объекты внутри функции, аргумент объект передает ссылку в качестве параметра
+oe.push('sdfjklsdj')
+console.log(oe)
 
-// const green = {
-//   abc: 100
-// }
+// удаление крайнего элемента, метод pop не только удаляет но и возвращает значение удалённого элемента не явно
 
-// function def(red) {
-//   red.abc += 5
-// }
+oe.pop()
+console.log(oe)
 
-// def(green)
+const is = oe.pop()
+console.log(is)
 
-// console.log(green.abc)
+let fjs = 5
+console.log(fjs)
+fjs = console.log(fjs)
+console.log(fjs)
 
-// // лучше использовать копирование объекта
-
-// const ch = {
-//   ab: 1999
-// }
-
-// function cd(pr) {
-//   const fff = Object.assign({}, pr)
-//   fff.ab += 1
-//   return fff
-// }
-
-// const dd = cd(ch)
-
-// console.log(ch.ab)
-// console.log(dd.ab)
-
-// // КОЛБЭК ФУНКЦИИ
-
-// // не работает хзчт
-// function ik() {
-//   const d = 10
-//   console.log(d)
-// }
-
-// function ww(tt) {
-//   function tt() {}
-// }
-
-// ww(ik)
-
-// // Пример колбэк функции
-
-function wq() {
-  console.log('Andrew')
+function fi() {
+  5 + 5
 }
 
-console.log('start')
+fjs = 3
+console.log(fjs)
+fjs = fi()
+console.log(fjs)
 
-setTimeout(wq, 3000)
+// элемент unshift добавляет элемент в начало массива, остальные элементы сдвигаются вправо
+
+const oiu = [
+  1, 2, 3, 4, 5
+]
+console.log(oiu)
+console.log(oiu[0])
+
+oiu.unshift('fjjjk')
+console.log(oiu)
+
+// метод shift удаляет первый элемент и возвращает его значение
+
+const asw = oiu.shift()
+console.log(oiu)
+console.log(asw)
+
+// метод forEach не изменяет оригинал, перебирает все элементы массива и производит определенные действия над ними
+
+oiu.forEach(el => console.log(el * 10))
 
 // свойство массива map
 
