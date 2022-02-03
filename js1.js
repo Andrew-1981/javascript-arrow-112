@@ -123,3 +123,19 @@ switch(dec){
     console.log('ffffff')  
 }
 
+// ТЕРНАРНЫЙ ОПЕРАТОР
+// можно оперировать только выражениями, а не инструкциями, можно вызывать функции т.к. это выражения
+dec
+  ? console.log('истинно')
+  : console.log('ложно')
+
+const fh = 5, jj = 0
+
+fh && jj
+  ? fi()
+  : console.log('dd')
+
+const fas = 4
+
+console.log(fas >= 0 ? -fas : fas)
+
