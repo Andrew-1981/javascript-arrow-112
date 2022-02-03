@@ -108,3 +108,18 @@ console.log(a, b, c, d, e)
 const gf = ({f, s}) => console.log(f, s)
 gf(kn)
 
+// УСЛОВНЫЙ ОПЕРАТОР SWITCH
+
+const dec = 12
+
+switch(dec){
+  case 2: 
+    console.log('fev')
+  break
+  case 12:
+    console.log('dec')
+  break
+  default:
+    console.log('ffffff')  
+}
+
