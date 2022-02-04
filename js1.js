@@ -78,6 +78,28 @@ console.log(asw)
 
 oiu.forEach(el => console.log(el * 10))
 
+
+const gg = el => console.log(el * 10)
+oiu.forEach(gg)
+
+
+const akj = ['fds', 'fdsl', 'ljsf', 'sfd']
+akj.forEach((a,b) => {console.log(a, b)})
+
+// перебор имён и элементов массива с помощью keys
+const alj = {
+  a: 'jjjjjj',
+  b: 'dddddd',
+  c: 'daaaaa'
+}
+Object.keys(alj).forEach((b, d) => {console.log(b, alj[b], d)})
+
+// перебор элементов массива с помощью values
+
+Object.values(alj).forEach(a => console.log(a))
+
+console.log(Object.values(alj)[1])
+
 // свойство массива map
 
 const zc = [1, 2, 3, 4, 5]
@@ -138,4 +160,59 @@ fh && jj
 const fas = 4
 
 console.log(fas >= 0 ? -fas : fas)
+
+// ЦИКЛЫ
+
+for (let i = -2; i < 5; i++){
+  console.log(i)
+}
+
+// цикл while, продолжает выполняться пока условие истинно
+
+let i = 7
+
+while (i < 19){
+  console.log(i + 5)
+  i++
+}
+
+// цикл do while, выполняется хотя бы один раз
+
+let io = 8
+
+do {
+  console.log('jljlj')
+} while (io < 8)
+
+// цикл for in для объектов
+
+const tr = {
+  a: 'lj;l',
+  b: 'asffs',
+  c: 'sfdljk'
+}
+
+for (const ddd in tr){
+  console.log(ddd,tr[ddd])
+}
+
+// for in для массивов
+
+const jh = ['j', 'fd', 'fdsa']
+for (const da in jh){
+  console.log(jh[da])
+}
+
+// for of для строк
+const ksk = 'afdlkjl;jldkfas;lkj'
+for (const skl of ksk){
+  console.log(skl)
+}
+
+// for of для массивов, для объектов не используется
+
+const ljk = ['kljlj', 'af;ljdf;as', 'dfskl']
+for (const k of ljk){
+  console.log(k)
+}
 
